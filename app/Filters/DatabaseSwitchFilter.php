@@ -60,22 +60,25 @@ class DatabaseSwitchFilter implements FilterInterface
 
     private function getCompanyDatabaseConfig($subdomain)
     {
-        // Load from a config file or environment variables in a real application
-        $companyConfig = [
-            'company1' => [
-                'hostname' => 'localhost',
-                'username' => 'postgres',
-                'password' => '123',
-                'database' => 'company1_db',
-            ],
-            'company2' => [
-                'hostname' => 'localhost',
-                'username' => 'company2_user',
-                'password' => 'password2',
-                'database' => 'company2_db',
-            ]
-        ];
+        
+        // Connect to the default database to fetch company database details
+        $db = \Config\Database::connect();
+        
+        // Query to get the database configuration for the given subdomain
+        $builder = $db->table('company_database_config');
+        $companyConfig = $builder->where('company_name', $subdomain)->get()->getRowArray();
 
-        return $companyConfig[$subdomain] ?? null;
+        // Check if the configuration was found and return the details
+        if ($companyConfig) {
+            return [
+                'hostname' => $companyConfig['hostname'],
+                'username' => $companyConfig['username'],
+                'password' => $companyConfig['password'],
+                'database' => $companyConfig['database_name'],
+            ];
+        }
+
+    // Return null if no matching company was found
+    return null;
     }
 }
