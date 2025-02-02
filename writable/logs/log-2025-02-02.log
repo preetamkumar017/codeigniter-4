@@ -1,0 +1,10 @@
+CRITICAL - 2025-02-02 07:28:39 --> CodeIgniter\Database\Exceptions\DatabaseException: ERROR:  invalid value for parameter "client_encoding": ""
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Postgre\Connection.php on line 98.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\Postgre\Connection->connect()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
