@@ -16,7 +16,19 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost:8080/';
+
+     public string $baseURL = '';
+
+     public function __construct()
+     {
+         // Detect the domain/subdomain dynamically
+         $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+         $this->baseURL = $protocol . $host . '/ci4/';
+        //  $this->baseURL = $this->getDynamicBaseURL($subdomain);
+     }
+ 
+     
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

@@ -34,6 +34,8 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'databaseSwitch' => \App\Filters\DatabaseSwitchFilter::class, // Register the alias for the filter
+
     ];
 
     /**
@@ -69,6 +71,7 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
+            'databaseSwitch' => ['except' => ['login', 'auth/*']], // Exclude routes like login, registration etc.
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
