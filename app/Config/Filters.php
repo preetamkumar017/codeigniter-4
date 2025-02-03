@@ -35,6 +35,7 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'databaseSwitch' => \App\Filters\DatabaseSwitchFilter::class, // Register the alias for the filter
+        'authGuard' => \App\Filters\AuthFilter::class,
 
     ];
 
@@ -71,7 +72,7 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            'databaseSwitch' => ['except' => ['login', 'auth/*']], // Exclude routes like login, registration etc.
+            'databaseSwitch'// => ['except' => ['login', 'auth/*']], // Exclude routes like login, registration etc.
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',

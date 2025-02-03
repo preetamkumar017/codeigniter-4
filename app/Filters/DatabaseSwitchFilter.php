@@ -12,6 +12,15 @@ class DatabaseSwitchFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+
+        // Check if the database connection is already set in the session
+        $dbConnection = \CodeIgniter\Config\Services::session()->get('db_connection');
+        
+        if ($dbConnection) {
+            // If already set, no need to reconnect. Just return.
+            return;
+        }
+    
         $host = $request->getServer('HTTP_HOST');
         $subdomain = explode('.', $host)[0];
 
@@ -43,7 +52,7 @@ class DatabaseSwitchFilter implements FilterInterface
 
                 // Store the database connection in the session
                 \CodeIgniter\Config\Services::session()->set('db_connection', $db);
-
+                session()->regenerate(false);
             } catch (\Exception $e) {
                 // Handle connection error
                 throw new PageNotFoundException("Database connection failed: " . $e->getMessage());

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /ci4/
+
+# Remove index.php from URL
+RewriteCond %{REQUEST_URI} ^/ci4/index.php
+RewriteRule ^index.php/(.*)$ /ci4/$1 [L,R=301]
+
+# Redirect all other requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

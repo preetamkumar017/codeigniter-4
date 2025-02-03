@@ -24,9 +24,13 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../../index3.html" method="post">
+      <?php if (session()->getFlashdata('error')): ?>
+        <p style="color:red;"><?php echo session()->getFlashdata('error'); ?></p>
+    <?php endif; ?>
+
+    <form action="<?= base_url('/public/auth/login') ?>" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email"  id="email" name="email" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -34,7 +38,8 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password"  id="password" name="password" required>
+
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
