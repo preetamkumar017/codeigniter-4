@@ -14,19 +14,10 @@ class EmployeeModel extends Model
     // Constructor
     public function __construct()
     {
-        // Initialize database connection dynamically
-        $session = \Config\Services::session();
 
-        // Get dynamic database configuration from session or config
-        if ($session->has('db_connection')) {
-            $dbConnection = $session->get('db_connection');
-        } else {
-            // Default database connection
-            $dbConnection = 'default';
-        }
 
         // Connect to the database dynamically using the specified connection
-        $this->db = Database::connect($dbConnection);  // Dynamically set the DB connection
+        $this->db = \Config\Database::connect('database2');  // Dynamically set the DB connection
 
         // print_r($this->db);
     }

@@ -45,8 +45,6 @@ class LoginController extends BaseController
                 'logged_in' => true
             ]);
             
-        echo '<pre>';
-        print_r(session()->get());
             // Redirect to dashboard
             return redirect()->to('public/dashboard');
         } else {

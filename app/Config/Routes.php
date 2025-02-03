@@ -10,7 +10,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/auth/login', 'Auth\LoginController::index');
 $routes->post('/auth/login', 'Auth\LoginController::login');
 $routes->get('/auth/logout', 'Auth\LoginController::logout');
-$routes->get('/dashboard', 'DashboardController::index', ['filter' => 'authGuard']); // Apply auth filter to dashboard
+// $routes->get('/dashboard', 'DashboardController::index', ['filter' => 'authGuard']); // Apply auth filter to dashboard
+$routes->get('/dashboard', 'ExampleController::index', ['filter' => 'authGuard']); // Apply auth filter to dashboard
 
 
 

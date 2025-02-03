@@ -33,7 +33,7 @@ class UserModel extends Model
             }
     
             // Connect to the database dynamically using the specified connection
-            $this->db = Database::connect($dbConnection);  // Dynamically set the DB connection
+            $this->db = \Config\Database::connect('database2');  // Dynamically set the DB connection
         }
     
     
