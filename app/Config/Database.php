@@ -8,32 +8,34 @@ class Database extends Config
     public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
     public string $defaultGroup = 'default';
 
-    public array $default = [
-        'DSN'        => '',
-        'hostname'   => 'localhost',
-        'username'   => 'postgres',
-        'password'   => '123',
-        'database'   => 'sinha',
-        'schema'     => 'public',
-        'DBDriver'   => 'Postgre',
-        'DBPrefix'   => '',
-        'pConnect'   => false,
-        'DBDebug'    => true,
-        'charset'    => 'utf8',
-        'swapPre'    => '',
-        'failover'   => [],
-        'port'       => 5432,
-        'dateFormat' => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],];
+    public array $default = [];
 
     public array $database2 = [];
 
     public function __construct()
     {
         parent::__construct();
+
+        $this->default = [
+            'DSN'        => '',
+            'hostname'   => 'localhost',
+            'username'   => 'postgres',
+            'password'   => '123',
+            'database'   => 'sinha',
+            'schema'     => 'public',
+            'DBDriver'   => 'Postgre',
+            'DBPrefix'   => '',
+            'pConnect'   => false,
+            'DBDebug'    => true,
+            'charset'    => 'utf8',
+            'swapPre'    => '',
+            'failover'   => [],
+            'port'       => 5432,
+            'dateFormat' => [
+                'date'     => 'Y-m-d',
+                'datetime' => 'Y-m-d H:i:s',
+                'time'     => 'H:i:s',
+            ]];
 
         $subdomain = $this->getSubdomain();
         $dbDetails = $this->getDatabaseDetailsFromMaster($subdomain);
@@ -73,27 +75,7 @@ class Database extends Config
     private function getDatabaseDetailsFromMaster(string $subdomain): ?array
     {
         log_message('debug', 'Fetched Company Config: ' . print_r($subdomain, true));
-        $db = \Config\Database::connect([
-            'DSN'        => '',
-            'hostname'   => 'localhost',
-            'username'   => 'postgres',
-            'password'   => '123',
-            'database'   => 'sinha',
-            'schema'     => 'public',
-            'DBDriver'   => 'Postgre',
-            'DBPrefix'   => '',
-            'pConnect'   => false,
-            'DBDebug'    => true,
-            'charset'    => 'utf8',
-            'swapPre'    => '',
-            'failover'   => [],
-            'port'       => 5432,
-            'dateFormat' => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-            ],
-        ]);
+        $db = \Config\Database::connect($this->default);
         $builder = $db->table('company_database_config');
 
         $companyConfig = $builder->where('company_name', $subdomain)->get()->getRowArray();

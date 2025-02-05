@@ -22,3 +22,8 @@ $routes->get('hr/employees/edit/(:num)', 'HR\EmployeeController::edit/$1', ['fil
 $routes->post('hr/employees/update', 'HR\EmployeeController::update', ['filter' => 'authGuard']);
 $routes->get('hr/employees/delete/(:num)', 'HR\EmployeeController::delete/$1', ['filter' => 'authGuard']);
 
+
+
+
+// $routes->get('/menu/preetam', 'Globle\Config\MenuController::index');
+$routes->get('/menu/preetam', 'framework\StakeholderMenuMapController::index');

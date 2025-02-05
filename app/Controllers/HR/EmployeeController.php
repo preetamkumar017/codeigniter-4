@@ -4,6 +4,8 @@ namespace App\Controllers\hr;
 
 use App\Services\hr\EmployeeService;
 use CodeIgniter\Controller;
+use App\Services\framework\StakeholderMenuMapService;
+use App\Services\Globle\Config\MenuServices;
 
 class EmployeeController extends Controller
 {
@@ -12,18 +14,27 @@ class EmployeeController extends Controller
     public function __construct()
     {
         
-        // Initialize service layer to handle business logic
+        $this->service = new StakeholderMenuMapService();
         $this->employeeService = new EmployeeService();
+        $this->menuService = new MenuServices();
+        
+        
     }
 
     public function index()
     {
+        
+        
+           
         
         // Fetch data using the service layer
         $employees = $this->employeeService->getAllEmployees();
 
         // Pass data to the view for rendering
         return view('hr/employee/index', ['employees' => $employees]);
+       
+
+        
     }
 
     public function show($id)
