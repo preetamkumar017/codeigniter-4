@@ -41,7 +41,7 @@ class Database extends Config
         $dbDetails = $this->getDatabaseDetailsFromMaster($subdomain);
         
         // Debugging - log to file
-        log_message('debug', 'Fetched Database Details: ' . print_r($dbDetails, true));
+        // log_message('debug', 'Fetched Database Details: ' . print_r($dbDetails, true));
 
         if ($dbDetails) {
             $this->database2 = [
@@ -62,7 +62,7 @@ class Database extends Config
             ];
         }
 
-        log_message('debug', 'Database2 Config: ' . print_r($this->database2, true));
+        // log_message('debug', 'Database2 Config: ' . print_r($this->database2, true));
     }
 
     private function getSubdomain(): string
@@ -74,14 +74,14 @@ class Database extends Config
 
     private function getDatabaseDetailsFromMaster(string $subdomain): ?array
     {
-        log_message('debug', 'Fetched Company Config: ' . print_r($subdomain, true));
+        // log_message('debug', 'Fetched Company Config: ' . print_r($subdomain, true));
         $db = \Config\Database::connect($this->default);
         $builder = $db->table('company_database_config');
 
         $companyConfig = $builder->where('company_name', $subdomain)->get()->getRowArray();
 
         // Log the fetched company config
-        log_message('debug', 'Fetched Company Config: ' . print_r($companyConfig, true));
+        // log_message('debug', 'Fetched Company Config: ' . print_r($companyConfig, true));
 
         if ($companyConfig) {
             return [

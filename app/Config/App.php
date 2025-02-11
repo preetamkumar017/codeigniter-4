@@ -23,8 +23,16 @@ class App extends BaseConfig
      {
          // Detect the domain/subdomain dynamically
          $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
-         $this->baseURL = $protocol . $host . '/ci4/';
+        
+// Check if running from CLI
+if (php_sapi_name() == "cli") {
+    // CLI environment doesn't have HTTP headers, so you might not need $host or $protocol
+    $this->baseURL = 'http://localhost/ci4/';  // Or a static value for CLI
+} else {
+    // For web requests, handle the protocol and host dynamically
+    $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? 'https://' : 'http://';
+    $this->baseURL = $protocol . $host . '/ci4/';
+}
         //  $this->baseURL = $this->getDynamicBaseURL($subdomain);
      }
  

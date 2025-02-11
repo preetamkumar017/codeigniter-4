@@ -1,0 +1,19 @@
+DEBUG - 2025-02-09 14:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-09 14:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-09 14:53:42 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-09 14:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-09 14:56:23 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-09 14:56:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\DashboardController.php(20): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-09 14:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-09 14:58:01 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]

@@ -1,0 +1,430 @@
+DEBUG - 2025-02-11 15:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 15:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 15:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 15:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 15:56:52 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 15:56:52 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 15:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 15:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 15:56:53 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:04:29 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:05:49 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:05:49 --> ErrorException: include(../include/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\Home\dashboard.php on line 7.
+ 1 APPPATH\Views\Home\dashboard.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../include/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php', 7)
+ 2 APPPATH\Views\Home\dashboard.php(7): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:06:21 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:06:21 --> ErrorException: include(include/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\Home\dashboard.php on line 7.
+ 1 APPPATH\Views\Home\dashboard.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php', 7)
+ 2 APPPATH\Views\Home\dashboard.php(7): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 16:08:07 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-11 16:08:07 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 16:08:07 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:08:35 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 16:08:35 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:08:35 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:08:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../include/header.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../include/header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('../include/header', [], true)
+ 3 APPPATH\Views\Home\dashboard.php(7): view('../include/header')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 7 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:08:47 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:08:47 --> ErrorException: include(../include/footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\Home\dashboard.php on line 9.
+ 1 APPPATH\Views\Home\dashboard.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../include/footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php', 9)
+ 2 APPPATH\Views\Home\dashboard.php(9): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:09:03 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:18:57 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 16:18:57 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:18:57 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:18:57 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dashboard]
+in APPPATH\Views\include\header.php on line 7.
+ 1 APPPATH\Views\include\header.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\include\\header.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Views\Home\dashboard.php(7): view('include/header')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 9 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:19:06 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:19:06 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dashboard]
+in APPPATH\Views\include\header.php on line 7.
+ 1 APPPATH\Views\include\header.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\include\\header.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Views\Home\dashboard.php(7): view('include/header')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 9 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:19:12 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 16:19:12 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:19:12 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:19:12 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dashboard]
+in APPPATH\Views\include\header.php on line 7.
+ 1 APPPATH\Views\include\header.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\ci4\\app\\Views\\include\\header.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Views\Home\dashboard.php(7): view('include/header')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\app\\Views\\Home\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Home/dashboard', [], true)
+ 9 APPPATH\Controllers\DashboardController.php(13): view('Home/dashboard')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:20:41 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:22:18 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:22:39 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 16:35:45 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-11 16:35:45 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 16:35:45 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 16:35:53 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-11 16:35:53 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 16:35:53 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:36:03 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 16:36:03 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:36:03 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:39:00 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:39:07 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:40:12 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:40:19 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:41:05 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 16:47:17 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-11 16:47:17 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 16:47:17 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 16:47:27 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-11 16:47:27 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 16:47:27 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:47:33 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 16:47:33 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:47:34 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:47:48 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:48:18 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:48:35 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:49:07 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:50:53 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:51:06 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:51:06 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "jquery.min.js')"
+[Method: GET, Route: static/plugins/jquery/jquery.min.js%27%29]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('static/plugins/jquery/jquery.min.js\')')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('static/plugins/jquery/jquery.min.js\')')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:51:45 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-11 16:51:46 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "jquery.min.js')"
+[Method: GET, Route: static/plugins/jquery/jquery.min.js%27%29]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('static/plugins/jquery/jquery.min.js\')')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('static/plugins/jquery/jquery.min.js\')')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:51:53 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 16:52:08 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "jquery.min.js')"
+[Method: GET, Route: auth/static/plugins/jquery/jquery.min.js%27%29]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('auth/static/plugins/jquery/jquery.min.js\')')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('auth/static/plugins/jquery/jquery.min.js\')')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 16:52:11 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "jquery.min.js')"
+[Method: GET, Route: auth/static/plugins/jquery/jquery.min.js%27%29]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('auth/static/plugins/jquery/jquery.min.js\')')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('auth/static/plugins/jquery/jquery.min.js\')')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 16:52:14 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "jquery.min.js')"
+[Method: GET, Route: auth/static/plugins/jquery/jquery.min.js%27%29]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('auth/static/plugins/jquery/jquery.min.js\')')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('auth/static/plugins/jquery/jquery.min.js\')')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 16:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:52:29 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 16:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 16:54:14 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 17:02:13 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-11 17:02:13 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 17:02:13 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-11 17:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:09:43 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-11 17:09:43 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:09:44 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:10:03 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:10:14 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:11:57 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:12:08 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:12:27 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:12:49 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:13:06 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:13:41 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:14:30 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:14:37 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:14:45 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:14:52 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:15:02 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-11 17:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-11 17:15:14 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]

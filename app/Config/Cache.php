@@ -21,7 +21,8 @@ class Cache extends BaseConfig
      * The name of the preferred handler that should be used. If for some reason
      * it is not available, the $backupHandler will be used in its place.
      */
-    public string $handler = 'file';
+    // public string $handler = 'file';
+    public $handler = 'redis';
 
     /**
      * --------------------------------------------------------------------------
@@ -135,8 +136,8 @@ class Cache extends BaseConfig
         'dummy'     => DummyHandler::class,
         'file'      => FileHandler::class,
         'memcached' => MemcachedHandler::class,
-        'predis'    => PredisHandler::class,
-        'redis'     => RedisHandler::class,
+        'predis'     => 'CodeIgniter\Cache\Handlers\PredisHandler', // Ensure Predis is included
+        'redis'      => 'CodeIgniter\Cache\Handlers\RedisHandler',
         'wincache'  => WincacheHandler::class,
     ];
 
@@ -158,4 +159,18 @@ class Cache extends BaseConfig
      * @var bool|list<string>
      */
     public $cacheQueryString = false;
+
+
+    /**
+     * --------------------------------------------------------------------------
+     * Predis settings
+     * --------------------------------------------------------------------------
+     *
+     * Your Predis server can be specified below, if you are using
+     * the Predis drivers.
+     *
+     * @var array<string, int|string|null>
+     */
+
+
 }
