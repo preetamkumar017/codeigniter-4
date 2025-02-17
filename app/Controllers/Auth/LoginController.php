@@ -76,6 +76,7 @@ class LoginController extends BaseController
         $redis = new Client([
             'scheme' => 'tcp',
             'host'   => '127.0.0.1',
+            // 'host'   => '172.16.225.1',
             'port'   => 6379,
         ]);
 

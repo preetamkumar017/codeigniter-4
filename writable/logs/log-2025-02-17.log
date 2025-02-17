@@ -1,0 +1,206 @@
+DEBUG - 2025-02-17 11:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-17 11:39:35 --> Predis\Connection\ConnectionException: No connection could be made because the target machine actively refused it [tcp://127.0.0.1:6379]
+[Method: POST, Route: auth/login]
+in VENDORPATH\predis\predis\src\Connection\AbstractConnection.php on line 144.
+ 1 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(109): Predis\Connection\AbstractConnection->onConnectionError('No connection could be made because the target machine actively refused it', 10061)
+ 2 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(154): Predis\Connection\StreamConnection->createStreamSocket(Object(Predis\Connection\Parameters), 'tcp://127.0.0.1:6379', 4)
+ 3 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(80): Predis\Connection\StreamConnection->tcpStreamInitializer(Object(Predis\Connection\Parameters))
+ 4 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(85): Predis\Connection\StreamConnection->createResource()
+ 5 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(230): Predis\Connection\AbstractConnection->connect()
+ 6 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(169): Predis\Connection\StreamConnection->connect()
+ 7 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(265): Predis\Connection\AbstractConnection->getResource()
+ 8 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(372): Predis\Connection\StreamConnection->write('*4
+$5
+SETEX
+$12
+user_1_links
+$4
+6000
+$146
+["hr\\/employees","hr\\/employees\\/create","hr\\/employees\\/store","hr\\/employees\\/edit","hr\\/employees\\/update","hr\\/employees\\/delete","dashboard"]
+')
+ 9 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(122): Predis\Connection\StreamConnection->writeRequest(Object(Predis\Command\Redis\SETEX))
+10 VENDORPATH\predis\predis\src\Client.php(381): Predis\Connection\AbstractConnection->executeCommand(Object(Predis\Command\Redis\SETEX))
+11 VENDORPATH\predis\predis\src\Client.php(335): Predis\Client->executeCommand(Object(Predis\Command\Redis\SETEX))
+12 APPPATH\Controllers\Auth\LoginController.php(89): Predis\Client->__call('setex', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\LoginController->login()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-17 11:40:06 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-17 11:40:06 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 11:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-17 11:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-17 11:40:06 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 11:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-17 11:41:39 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+CRITICAL - 2025-02-17 12:24:31 --> ErrorException: Cannot redeclare Config\Session::$expiration
+[Method: GET, Route: auth/login]
+in APPPATH\Config\Session.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-02-17 12:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:25:49 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type integer but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:26:50 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:26:54 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:28:51 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:33:42 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:33:44 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:34:43 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 12:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 12:34:44 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('7d39b102fac6ec8...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 13:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 13:46:22 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('d2ac8bf021631f6...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 13:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-02-17 13:52:24 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;timestamp&quot; is of type bigint but expression is of type timestamp with time zone
+LINE 1: ...(&quot;timestamp&quot;, &quot;id&quot;, &quot;ip_address&quot;, &quot;data&quot;) VALUES (now(), 'ci...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "ci...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "ci...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ci...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ci...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Session\Handlers\DatabaseHandler.php(199): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->write('d2ac8bf021631f6...', '__ci_last_regen...')
+#7 [internal function]: session_write_close()
+#8 {main}
+DEBUG - 2025-02-17 14:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:06:27 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-17 14:06:27 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 14:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:06:27 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 14:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:07:10 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 14:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:07:16 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 14:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:08:38 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-17 14:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-02-17 14:08:46 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]

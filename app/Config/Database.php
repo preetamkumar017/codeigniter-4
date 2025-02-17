@@ -18,7 +18,7 @@ class Database extends Config
 
         $this->default = [
             'DSN'        => '',
-            'hostname'   => 'localhost',
+            'hostname'   => '172.16.225.1',
             'username'   => 'postgres',
             'password'   => '123',
             'database'   => 'sinha',
@@ -94,4 +94,14 @@ class Database extends Config
 
         return null;
     }
+
+    public $session = [
+        'driver' => 'CodeIgniter\Session\Handlers\DatabaseHandler',
+        'config' => [
+            'table_name' => 'ci_sessions',
+            'table_column_session_id' => 'id',
+            'table_column_last_activity' => 'timestamp',
+            'table_column_user_data' => 'data',
+        ],
+    ];
 }

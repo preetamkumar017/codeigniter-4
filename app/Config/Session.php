@@ -21,7 +21,9 @@ class Session extends BaseConfig
      *
      * @var class-string<BaseHandler>
      */
-    public string $driver = FileHandler::class;
+    // public string $driver = FileHandler::class;
+    public $driver = 'CodeIgniter\Session\Handlers\DatabaseHandler';
+
 
     /**
      * --------------------------------------------------------------------------
@@ -57,7 +59,9 @@ class Session extends BaseConfig
      *
      * IMPORTANT: You are REQUIRED to set a valid save path!
      */
-    public string $savePath = WRITEPATH . 'session';
+    // public string $savePath = WRITEPATH . 'session';
+    public $savePath = 'ci_sessions';
+
 
     /**
      * --------------------------------------------------------------------------
@@ -124,4 +128,8 @@ class Session extends BaseConfig
      * seconds.
      */
     public int $lockMaxRetries = 300;
+
+    public $saveHandler = 'App\Session\CustomDatabaseHandler'; // Custom Handler Use Karein
+
+    public $sessionStore = 'database'; // Session Store Database Me Save Karein
 }

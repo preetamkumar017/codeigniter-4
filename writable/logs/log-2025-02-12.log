@@ -1,0 +1,295 @@
+DEBUG - 2025-02-12 14:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 14:49:39 --> Predis\Connection\ConnectionException: No connection could be made because the target machine actively refused it [tcp://127.0.0.1:6379]
+[Method: POST, Route: auth/login]
+in VENDORPATH\predis\predis\src\Connection\AbstractConnection.php on line 144.
+ 1 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(109): Predis\Connection\AbstractConnection->onConnectionError('No connection could be made because the target machine actively refused it', 10061)
+ 2 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(154): Predis\Connection\StreamConnection->createStreamSocket(Object(Predis\Connection\Parameters), 'tcp://127.0.0.1:6379', 4)
+ 3 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(80): Predis\Connection\StreamConnection->tcpStreamInitializer(Object(Predis\Connection\Parameters))
+ 4 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(85): Predis\Connection\StreamConnection->createResource()
+ 5 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(230): Predis\Connection\AbstractConnection->connect()
+ 6 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(169): Predis\Connection\StreamConnection->connect()
+ 7 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(265): Predis\Connection\AbstractConnection->getResource()
+ 8 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(372): Predis\Connection\StreamConnection->write('*4
+$5
+SETEX
+$12
+user_1_links
+$4
+6000
+$146
+["hr\\/employees","hr\\/employees\\/create","hr\\/employees\\/store","hr\\/employees\\/edit","hr\\/employees\\/update","hr\\/employees\\/delete","dashboard"]
+')
+ 9 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(122): Predis\Connection\StreamConnection->writeRequest(Object(Predis\Command\Redis\SETEX))
+10 VENDORPATH\predis\predis\src\Client.php(381): Predis\Connection\AbstractConnection->executeCommand(Object(Predis\Command\Redis\SETEX))
+11 VENDORPATH\predis\predis\src\Client.php(335): Predis\Client->executeCommand(Object(Predis\Command\Redis\SETEX))
+12 APPPATH\Controllers\Auth\LoginController.php(88): Predis\Client->__call('setex', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\LoginController->login()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 14:50:14 --> Predis\Connection\ConnectionException: No connection could be made because the target machine actively refused it [tcp://127.0.0.1:6379]
+[Method: POST, Route: auth/login]
+in VENDORPATH\predis\predis\src\Connection\AbstractConnection.php on line 144.
+ 1 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(109): Predis\Connection\AbstractConnection->onConnectionError('No connection could be made because the target machine actively refused it', 10061)
+ 2 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(154): Predis\Connection\StreamConnection->createStreamSocket(Object(Predis\Connection\Parameters), 'tcp://127.0.0.1:6379', 4)
+ 3 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(80): Predis\Connection\StreamConnection->tcpStreamInitializer(Object(Predis\Connection\Parameters))
+ 4 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(85): Predis\Connection\StreamConnection->createResource()
+ 5 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(230): Predis\Connection\AbstractConnection->connect()
+ 6 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(169): Predis\Connection\StreamConnection->connect()
+ 7 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(265): Predis\Connection\AbstractConnection->getResource()
+ 8 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(372): Predis\Connection\StreamConnection->write('*4
+$5
+SETEX
+$12
+user_1_links
+$4
+6000
+$146
+["hr\\/employees","hr\\/employees\\/create","hr\\/employees\\/store","hr\\/employees\\/edit","hr\\/employees\\/update","hr\\/employees\\/delete","dashboard"]
+')
+ 9 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(122): Predis\Connection\StreamConnection->writeRequest(Object(Predis\Command\Redis\SETEX))
+10 VENDORPATH\predis\predis\src\Client.php(381): Predis\Connection\AbstractConnection->executeCommand(Object(Predis\Command\Redis\SETEX))
+11 VENDORPATH\predis\predis\src\Client.php(335): Predis\Client->executeCommand(Object(Predis\Command\Redis\SETEX))
+12 APPPATH\Controllers\Auth\LoginController.php(88): Predis\Client->__call('setex', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\LoginController->login()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 14:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 14:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 14:50:29 --> Predis\Connection\ConnectionException: No connection could be made because the target machine actively refused it [tcp://127.0.0.1:6379]
+[Method: POST, Route: auth/login]
+in VENDORPATH\predis\predis\src\Connection\AbstractConnection.php on line 144.
+ 1 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(109): Predis\Connection\AbstractConnection->onConnectionError('No connection could be made because the target machine actively refused it', 10061)
+ 2 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(154): Predis\Connection\StreamConnection->createStreamSocket(Object(Predis\Connection\Parameters), 'tcp://127.0.0.1:6379', 4)
+ 3 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(80): Predis\Connection\StreamConnection->tcpStreamInitializer(Object(Predis\Connection\Parameters))
+ 4 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(85): Predis\Connection\StreamConnection->createResource()
+ 5 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(230): Predis\Connection\AbstractConnection->connect()
+ 6 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(169): Predis\Connection\StreamConnection->connect()
+ 7 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(265): Predis\Connection\AbstractConnection->getResource()
+ 8 VENDORPATH\predis\predis\src\Connection\StreamConnection.php(372): Predis\Connection\StreamConnection->write('*4
+$5
+SETEX
+$12
+user_1_links
+$4
+6000
+$146
+["hr\\/employees","hr\\/employees\\/create","hr\\/employees\\/store","hr\\/employees\\/edit","hr\\/employees\\/update","hr\\/employees\\/delete","dashboard"]
+')
+ 9 VENDORPATH\predis\predis\src\Connection\AbstractConnection.php(122): Predis\Connection\StreamConnection->writeRequest(Object(Predis\Command\Redis\SETEX))
+10 VENDORPATH\predis\predis\src\Client.php(381): Predis\Connection\AbstractConnection->executeCommand(Object(Predis\Command\Redis\SETEX))
+11 VENDORPATH\predis\predis\src\Client.php(335): Predis\Client->executeCommand(Object(Predis\Command\Redis\SETEX))
+12 APPPATH\Controllers\Auth\LoginController.php(88): Predis\Client->__call('setex', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\LoginController->login()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 14:51:35 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-12 14:51:35 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 14:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 14:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 14:51:35 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:17:17 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:17:29 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:17:44 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:25:38 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:25:43 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:30:49 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:35:22 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:40:56 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:41:13 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:41:20 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:41:27 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 15:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 15:41:34 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:01:06 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:08:01 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:08:04 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:09:52 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:10:44 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:11:25 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:13:13 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:23:34 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:23:49 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:26:14 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:26:28 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:51:15 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:51:15 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 16:51:15 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:52:33 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:52:33 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 71.
+ 1 APPPATH\Filters\AuthFilter.php(71): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 16:52:33 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 80.
+ 1 APPPATH\Filters\AuthFilter.php(80): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:52:52 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:52:52 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 71.
+ 1 APPPATH\Filters\AuthFilter.php(71): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 16:52:52 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 80.
+ 1 APPPATH\Filters\AuthFilter.php(80): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:53:39 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:53:39 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 71.
+ 1 APPPATH\Filters\AuthFilter.php(71): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 16:53:39 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 80.
+ 1 APPPATH\Filters\AuthFilter.php(80): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:55:12 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:55:12 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 16:55:12 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given
+[Method: GET, Route: dashboard]
+in APPPATH\Filters\AuthFilter.php on line 79.
+ 1 APPPATH\Filters\AuthFilter.php(79): in_array('dashboard', null)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:55:26 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:55:26 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:55:44 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:55:44 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 16:56:03 --> Failed to retrieve simple cached value for key: user_1_links
+WARNING - 2025-02-12 16:56:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Filters\AuthFilter.php on line 70.
+ 1 APPPATH\Filters\AuthFilter.php(70): json_decode(null, true)
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-12 16:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:56:09 --> Simple value successfully saved to Redis with key: user_1_links
+DEBUG - 2025-02-12 16:56:09 --> Retrieved simple cached value: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 16:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 16:56:10 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]
+DEBUG - 2025-02-12 17:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 17:00:57 --> Retrieved simple cached value: AuthFilter: ["hr\/employees","hr\/employees\/create","hr\/employees\/store","hr\/employees\/edit","hr\/employees\/update","hr\/employees\/delete","dashboard"]

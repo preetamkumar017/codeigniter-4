@@ -19,6 +19,7 @@ class AuthFilter implements FilterInterface
         $redis = new Client([
             'scheme' => 'tcp',
             'host'   => '127.0.0.1',
+            // 'host'   => '172.16.225.1',
             'port'   => 6379,
         ]);
 
@@ -46,7 +47,7 @@ class AuthFilter implements FilterInterface
                 $links = json_decode($redis->get($cacheKey), true);
 
 
-                if (!in_array($url, $links)) {
+                if (!in_array($url, $links ?? [])) {
                     return service('response')->setJSON(['error' => 'No Access'])->setStatusCode(403);
                 }
             } catch (\Exception $e) {
@@ -54,7 +55,7 @@ class AuthFilter implements FilterInterface
             }
         } else {
             if (!session()->get('logged_in')) {
-                return redirect()->to('/auth/login');
+                return redirect()->to('public/auth/login');
             }
 
             $userId = session()->get('user_id');
@@ -76,8 +77,8 @@ class AuthFilter implements FilterInterface
             // }
 
 
-            if (!in_array($url, $links)) {
-                return redirect()->to('/no-access');
+            if (!in_array($url, $links ?? [])) {
+                return redirect()->to('public/auth/login');
             }
         }
     }
