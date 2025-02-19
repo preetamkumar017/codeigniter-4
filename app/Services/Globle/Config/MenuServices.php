@@ -20,7 +20,7 @@ class MenuServices
 
     public function getMenuById($id)
     {
-        return $this->menuRepository->findById($id);
+        return $this->menuRepository->getMenuById($id);
     }
     public function getMenusByIds(array $ids)
     {

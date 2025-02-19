@@ -45,6 +45,9 @@
           </form>
         </div>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?= base_url('public/auth/logout')?>" class="nav-link">Logout</a>
+      </li>
 
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
@@ -202,7 +205,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="<?= base_url('public/hr/profile/personal_info')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Personal Information</p>
                 </a>

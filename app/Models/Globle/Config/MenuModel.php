@@ -26,7 +26,8 @@ class MenuModel extends Model
         'pending_job_service',
         'pending_job_method',
         'help_video_url',
-        'help_instruction'
+        'help_instruction',
+        'color'
     ];
 
     protected $useTimestamps = false;

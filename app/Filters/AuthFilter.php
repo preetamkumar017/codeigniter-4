@@ -68,18 +68,25 @@ class AuthFilter implements FilterInterface
                 log_message('error', 'Failed to retrieve simple cached value for key: ' . $cacheKey);
             }
             
-            $links = json_decode($redis->get($cacheKey), true);
+            $allData = json_decode($redis->get($cacheKey), true);
 
             // if (!$links) {
             //     $roles = session()->get('roles');
             //     $links = $this->getUserLinks($roles);
             //     // $redis->setex($cacheKey, 600, json_encode($links));
             // }
+            // print_r($allData);
 
+            if (!in_array($url, $allData['links'] ?? [])) {
+                 // Use the services class to get the response object
+            $response = Services::response();
 
-            if (!in_array($url, $links ?? [])) {
-                return redirect()->to('public/auth/login');
+            // Return 403 Forbidden response
+            return $response->setStatusCode(403)
+                             ->setBody('Forbidden. You do not have access to this resource.');
             }
+            $session = session();
+            $session->setFlashdata('allData', (object) $allData);
         }
     }
 

@@ -70,6 +70,10 @@ class LoginController extends BaseController
                 $links = array_merge($links, explode(',', $menu['sublinks']));
             }
         }
+
+        $allData = [];
+        $allData['menu'] = $menusByIds;
+        $allData['links'] = $links;
     
      
 // Create a new Redis client
@@ -86,7 +90,7 @@ class LoginController extends BaseController
         // $isSaved = $redis->setex($simpleKey, 600, $simpleValue); // Cache for 10 minutes
         
         $cacheKey = "user_{$userId}_links";
-        $isSaved =  $redis->setex($cacheKey, 6000, json_encode($links)); // Cache for 10 minutes
+        $isSaved =  $redis->setex($cacheKey, 6000, json_encode($allData)); // Cache for 10 minutes
 
 
         if ($isSaved) {
